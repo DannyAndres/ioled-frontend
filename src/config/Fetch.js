@@ -7,7 +7,9 @@ export default async (call,body) => {
       method: body ? 'POST' : 'GET',
       credentials: 'include',
       headers: {
-        'Content-Type' : 'application/json',
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Credentials": true
       },
       body: JSON.stringify(body)
     }).then((response) => {
