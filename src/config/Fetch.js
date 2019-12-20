@@ -5,6 +5,7 @@ export default async (call,body) => {
   try {
     const response = await fetch(BASE_URL, {
       method: body ? 'POST' : 'GET',
+      credentials: 'include',
       headers: {
         'Content-Type' : 'application/json',
       },
